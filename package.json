@@ -1,0 +1,15 @@
+{
+  "name": "meetme-backend",
+  "version": "1.0.0",
+  "description": "This is the backend api for meetme social media",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Temitope Omosebi",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
