@@ -4,34 +4,35 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
      firstname: {
          type: String,
-         required: true,
+         require: true,
          min: 3,
          max: 20,
-         unique: true
+         unique: false
      },
 
       lastname: {
          type: String,
-         required: true,
+         require: true,
          min: 3,
          max: 20,
+         unique: false
      },
 
     email: {
         type: String,
-        required: true,
+        require: true,
         unique: true
     },
 
     password: {
         type: String,
-        required: true,
+        require: true,
         min: 6
     },
 
     phone: {
         type: String,
-        unique: true
+       // unique: true
     },
 
     profilePicture: {
@@ -42,6 +43,11 @@ const userSchema = new mongoose.Schema({
     profilePicture: {
         type: String,
         default: ""
+    },
+
+    isAdmin:{
+        type: Boolean,  // this is a Bolean character
+        default: false  // by default  it will be false
     },
 
     about: {
