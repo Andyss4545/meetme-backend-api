@@ -3,12 +3,16 @@ const { getUser, deleteUser, updateUser, followUser, unfollowUser } = require('.
 const router = express.Router();
 
 
-
+// Get user
 router.get('/:id', getUser)
+// Delete user Route
 router.delete('/:id', deleteUser)
+// Update user Route
 router.put('/:id', updateUser)
-router.put('/follow/:id', followUser)
-router.put('/unfollow/:id', unfollowUser)
+// Follow user Route
+router.put('/:id/follow', followUser)
+// Unfollow user Route
+router.put('/:id/unfollow', unfollowUser)
 
 
 module.exports = router
