@@ -11,6 +11,7 @@ const PORT = 5500
 app.use(express.json()) // body parser
 app.use("/api/auth", require('./routes/authRoute'))
 app.use("/api/users", require('./routes/userRoutes'))
+app.use("/api/posts", require('./routes/postRoute'))
 app.use(helmet())
 app.use(morgan('common'))
 
