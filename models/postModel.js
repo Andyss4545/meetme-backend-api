@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 
+// Here is the post schema or model
 const postSchema = new mongoose.Schema({
        userId: {
           type: String,
-          //type: mongoose.Schema.Types.String,
           require: true,
-          ref: 'post'
        },
 
       desc:{
@@ -23,7 +22,15 @@ const postSchema = new mongoose.Schema({
       likes: {
           type : Array,
           default: []
-      }
+      },
+
+      // comments are in array
+      comments:[
+        {
+           type: String,
+           ref: 'comment'
+        }
+      ]
 
 },{timestamps: true})
 
