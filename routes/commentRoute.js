@@ -1,16 +1,16 @@
 const express = require('express');
-const { getComment, updateComment, deleteComment, postComment, likeComment } = require('../controllers/commentController');
+const {updateComment, deleteComment, postComment, likeComment, getAllComments } = require('../controllers/commentController');
 const router = express.Router();
 
-// post comment
-router.post('/', postComment);
+// Post comment
+router.post('/:id', postComment);
 // Edit comment
 router.put('/:id', updateComment);
-// get comment
-router.get('/:id', getComment);
-// delete comment
+// Get all comment
+router.get('/:id/comments', getAllComments);
+// Delete comment
 router.delete('/:id', deleteComment);
-// like comment
+// Like comment
 router.put('/:id/like', likeComment);
 
 
